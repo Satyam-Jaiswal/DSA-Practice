@@ -8,6 +8,8 @@ using namespace std;
 class Solution
 {
 public:
+#define ll long long int
+
     // Function to find maximum product subarray
     long long maxProduct(int *arr, int n)
     {
@@ -16,9 +18,22 @@ public:
 
         maxP = minP = res = 1;
 
-        for (int i = 0; i < N; i++)
+        if (n == 1)
         {
-            ll x = A[i];
+            return arr[0];
+        }
+
+        if (n == 2)
+        {
+            if (arr[0] == 0)
+                return arr[1];
+            else if (arr[1] == 0)
+                return arr[0];
+        }
+
+        for (int i = 0; i < n; i++)
+        {
+            ll x = arr[i];
 
             if (x < 0)
                 swap(maxP, minP);
