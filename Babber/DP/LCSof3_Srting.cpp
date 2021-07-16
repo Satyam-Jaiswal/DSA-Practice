@@ -16,7 +16,6 @@ int main()
         cout << LCSof3(A, B, C, n1, n2, n3) << endl;
     }
 }
-// Contributed By: Pranay Bansal
 // } Driver Code Ends
 
 int LCSof3(string A, string B, string C, int n1, int n2, int n3)
